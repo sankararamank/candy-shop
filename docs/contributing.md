@@ -1,10 +1,10 @@
 # Guidelines
 This is basic guideline to follow while developing.
 1. Issues will be picked for development only after it is approved by Contributors of this project.
-2. Issues will be assigned on request basis if it is not assigned.
-4. PRs will be reviewed only when
-   1. It solves a listed Issue.
-   2. The code is developed by the one assigned.
+2. Issues will be assigned on request basis if it is not assigned already.
+3. PRs will be reviewed only when
+   1. it is assigned to one of the existing contributors
+   2. all todo items PR template is checked/done. 
 
 ## Workflow
 This section is meant as a support for beginners who are trying to figure out their way through developing features for a backend project. This is not a holy grail, should be taken with a pinch of salt. You are welcome develop around it for your own purposes.
