@@ -27,7 +27,7 @@ SECRET_KEY = str(os.getenv("SECRETY_KEY"))
 ENVIRONMENT = str(os.getenv("ENVIRONMENT")).lower()
 # TODO: Find better way to manage dev and prod settings, else raise errors
 #  for wrong values of ENVIRONMENT
-DEBUG = True if  "dev" in ENVIRONMENT else False
+DEBUG = True if "dev" in ENVIRONMENT else False
 
 ALLOWED_HOSTS = []
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "products",
+    "reviews",
 ]
 
 MIDDLEWARE = [
