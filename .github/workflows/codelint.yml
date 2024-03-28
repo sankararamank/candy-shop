@@ -1,0 +1,11 @@
+name: Code Quality Assurance.
+on:
+  pull_request:
+    branches: [dev]
+
+jobs:
+  ruff-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: chartboost/ruff-action@v1
