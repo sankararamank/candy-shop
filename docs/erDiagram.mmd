@@ -1,0 +1,62 @@
+erDiagram
+    USER {
+        User_ID int
+        First_Name varchar(35)
+        Last_Name varchar(35)
+        Street_Address_1 varchar(35)
+        Street_Address_2 varchar(35)
+        Town_Suburb varchar(35)
+        State_Province varchar(35)
+        Postal_Code_Zip_Code varchar(10)
+        Country varchar(60)
+        Contact_No varchar(10)
+        DOB date
+        Email varchar(255)
+        Password varchar
+    }
+
+    CUSTOMERS {
+        Customer_ID int
+    }
+
+    SELLERS {
+        Seller_ID int
+        Account_Details varchar
+        Earnings decimal
+    }
+
+    PRODUCTS {
+        Product_ID int
+        Title varchar(255)
+        Description varchar
+        Options json
+        Tags enum(35)[]
+        Price decimal
+        Quantity_Remaining int
+        Seller_ID int
+        Avg_Rating decimal
+    }
+
+    ORDERS {
+        Order_ID int
+        Customer_ID int
+        Seller_ID int
+        Product_ID int
+        Status enum(35)
+        Transaction_ID int
+    }
+
+    REVIEWS {
+        User_ID int
+        Title varchar(255)
+        Body varchar(255)
+        Product_ID int
+        Rating int
+    }
+
+    USER ||--o{ CUSTOMERS : "is"
+    USER ||--o{ SELLERS : "is"
+    CUSTOMERS }o--|| ORDERS : "make"
+    CUSTOMERS }o--|| REVIEWS : "make"
+    SELLERS }o--|| PRODUCTS : "list"
+    PRODUCTS ||--|| SELLERS : "belongs to"
